@@ -1,35 +1,37 @@
-const mongoose = require(mongoose);
+const mongoose = require('mongoose');
 
 const userSchema = mongoose.Schema({
-    name:{
-        type:String,
+    name: {
+        type: String,
         maxlength: 50
     },
-    email:{
-        type:String,
+    email: {
+        type: String,
         trim: true,
-        unique:1
+        unique: 1
     },
-    password:{
-        type:String,
-        minlength:5
+    password: {
+        type: String,
+        minlength: 5
     },
-    lastnamee:{
-        type:String,
-        maxlength:50
+    lastname: {
+        type: String,
+        maxlength: 50
     },
     role: {
-        type:Number,
-        default:0
+        type: Number,
+        default: 0
     },
-    image:String,
-    token:{
-        type:String
+    image: String,
+    token: {
+        type: String
     },
-    tokenExp:{
-        type:Number
+    tokenExp: {
+        type: Number
     }
 })
 const User = mongoose.model('User', userSchema)
 
-module.exports = {User}
+module.exports = {
+    User
+}
