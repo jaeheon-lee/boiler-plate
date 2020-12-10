@@ -30,6 +30,9 @@ app.get('/', (req, res) => {
 app.get('/vote', (req, res) => {
     res.send('투표합시다.')
 })
+app.get('/vote_result', (req, res) => {
+    res.send('투표합시다.')
+})
 
 app.post('/register', (req, res) => {
 
